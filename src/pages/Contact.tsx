@@ -1,12 +1,13 @@
 
 import { useState } from "react";
-import { Mail, MessageSquare, Phone, MapPin, Send } from "lucide-react";
+import { Mail, MessageSquare, Phone, Send } from "lucide-react";
 import MainLayout from "@/components/layout/MainLayout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
+import MapComponent from "@/components/contact/MapComponent";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -55,8 +56,8 @@ const Contact = () => {
                   <Phone className="h-6 w-6 text-eco-primary" />
                 </div>
                 <h3 className="font-semibold mb-2">Call Us</h3>
-                <p className="text-gray-600">+1 (555) 123-4567</p>
-                <p className="text-gray-600">Monday-Friday, 9am-5pm</p>
+                <p className="text-gray-600">+91 80 2345 6789</p>
+                <p className="text-gray-600">Monday-Friday, 9am-5pm IST</p>
               </CardContent>
             </Card>
 
@@ -132,24 +133,7 @@ const Contact = () => {
             </div>
             <div>
               <h2 className="text-2xl font-bold mb-6">Visit Us</h2>
-              <Card className="shadow-md">
-                <CardContent className="p-0">
-                  <div className="bg-gray-200 h-64 flex items-center justify-center">
-                    <div className="text-center">
-                      <MapPin className="h-8 w-8 text-eco-primary mx-auto mb-2" />
-                      <p className="text-gray-600">Map will be displayed here</p>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="font-semibold mb-2">Our Office</h3>
-                    <p className="text-gray-600">
-                      123 Eco Street, Green Building<br />
-                      Sustainable City, SC 12345<br />
-                      United States
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+              <MapComponent />
             </div>
           </div>
 
